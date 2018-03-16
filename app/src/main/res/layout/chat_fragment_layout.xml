@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/list_of_messages"
+        android:layout_width="match_parent"
+        android:layout_below="@id/view2"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:divider="@android:color/white"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/white"
+        android:scrollbars="none"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"></ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view1"
+        android:background="@color/app_color" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:layout_below="@+id/view1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="testuser1"
+            android:textSize="16sp"
+            android:id="@+id/nameofsender"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view2"
+        android:background="@color/app_color"
+        android:layout_below="@+id/relativelayout"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/send_button"
+            android:gravity="start|center"
+            android:hint="Enter Message"
+            android:paddingLeft="5dp"
+            android:textColor="@color/app_color" />
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Send"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:textColor="@color/app_color"/>
+    </RelativeLayout>
+</RelativeLayout>

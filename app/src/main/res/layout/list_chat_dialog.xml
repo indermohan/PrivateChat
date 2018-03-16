@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imagechat" />
+
+    <TextView
+        android:id="@+id/name"
+        android:textSize="16sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imagechat"
+        android:layout_toRightOf="@+id/imagechat"
+        android:text="Sunil" />
+
+    <TextView
+        android:id="@+id/latestmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view3"
+        android:layout_toEndOf="@+id/imagechat"
+        android:paddingLeft="2dp"
+        android:text="Hello" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imagechat"
+        android:background="@color/app_color"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/imagechat"
+        android:id="@+id/view3"></View>
+
+    <TextView
+        android:id="@+id/dateandtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="27/09/2017" />
+</RelativeLayout>
